@@ -8,8 +8,8 @@
 <body>
     <form action="{{ route('member.add') }}" method="POST">
         @csrf
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name">
+        <label for="nama">Name: </label>
+        <input type="text" name="nama" id="nama">
 
         <label for="nim">NIM: </label>
         <input type="number" name="nim" id="nim">
@@ -42,7 +42,7 @@
             @forelse($dataMem as $dm)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $dm->name }}</td>
+                    <td>{{ $dm->nama }}</td>
                     <td>{{ $dm->nim }}</td>
                     <td>{{ $dm->kampus }}</td>
                     <td>{{ $dm->divisi }}</td>

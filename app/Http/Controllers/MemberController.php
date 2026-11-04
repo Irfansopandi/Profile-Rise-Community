@@ -15,15 +15,15 @@ class MemberController extends Controller
 
     public function addMember(Request $request) {
         $request->validate([
-            'name' => 'required',
-            'nim' => 'required|integer',
+            'nama' => 'required',
+            'nim' => 'required|numeric|digits:8',
             'kampus' => 'required',
             'divisi' => 'required',
             'jabatan' => 'required'
         ]);
 
         Member::create([
-            'name' => $request->name,
+            'nama' => $request->nama,
             'nim' => $request->nim,
             'kampus' => $request->kampus,
             'divisi' => $request->divisi,
